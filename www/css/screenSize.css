@@ -1,0 +1,129 @@
+/***********************/
+/* Screen Sizing       */
+/***********************/
+body::before,
+body::after {
+  border-radius: 4px;
+  bottom: 0;
+  color: #fff;
+  content: 'screen size unknown';
+  right: 0;
+  padding: 4px 8px;
+  position: fixed;
+}
+body::before {
+  background-color: #fff;
+}
+body::after {
+  background: rgba(0,0,0,0.6); /* black */
+}
+
+/* Extra Small devices (1px and up) */
+@media (min-width: 1px) and (orientation:landscape) {
+  body::before,
+  body::after {
+    content: 'XS / Landscape / >1px';
+  }
+  body::after {
+    background-color: rgba(255,0,0,0.6); /* red */
+  }
+}
+@media (min-width: 1px) and (orientation:portrait) {
+  body::before,
+  body::after {
+    content: 'XS / Portrait / >1px';
+  }
+  body::after {
+    background-color: rgba(255,0,0,0.6); /* red */
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (orientation:landscape) {
+  body::before,
+  body::after {
+    content: 'SM / Landscape / >576px';
+  }
+  body::after {
+    background-color: rgba(76,153,0,0.6); /* green */
+    color: #000;
+  }
+}
+@media (min-width: 576px) and (orientation:portrait) {
+  body::before,
+  body::after {
+    content: 'SM / Portrait / >576px';
+  }
+  body::after {
+    background-color: rgba(76,153,0,0.6); /* green */
+    color: #000;
+   }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (orientation:landscape) {
+  body::before,
+  body::after {
+    content: 'M / Landscape / >768px';
+  }
+  body::after {
+    background-color: rgba(0,76,153,0.6); /* blue */
+    color: #fff;
+    
+  }
+}
+@media (min-width: 768px) and (orientation:portrait) {
+  body::before,
+  body::after {
+    content: 'M / Portrait / >768px';
+  }
+  body::after {
+    background-color: rgba(0,76,153,0.6); /* blue */
+    color: #fff;
+    
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (orientation:landscape) {
+  body::before,
+  body::after {
+    content: 'L / Landscape / >992px';
+  }
+  body::after {
+    background-color: rgba(128,128,128,0.6); /* gray */
+    color: #000;
+    
+  }
+}
+@media (min-width: 992px) and (orientation:portrait) {
+  body::before,
+  body::after {
+    content: 'L / Portrait / >992px';
+  }
+  body::after {
+    background-color: rgba(128,128,128,0.6); /* gray */
+    color: #000;
+    
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (orientation:landscape) {
+  body::before,
+  body::after {
+    content: 'XL / Landscape / >1200px';
+  }
+  body::after {
+    background-color: rgba(255,255,0,0.6); /* yellow */
+  }
+}
+@media (min-width: 1200px) and (orientation:portrait) {
+  body::before,
+  body::after {
+    content: 'XL / Portrait / >1200px';
+   }
+  body::after {
+    background-color: rgba(255,255,0,0.6); /* yellow */
+  }
+}

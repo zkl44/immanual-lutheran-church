@@ -1,0 +1,32 @@
+By default, php cannot be used inside of .html files...
+
+There are two options if php is needed:
+
+1. Rename all .html files to .php.
+    * this is easiest but time consuming if existing files and paths are already using .html
+    
+2. Find the root directory and add the following lines to the .htaccess
+
+    AddHandler application/x-httpd-ea-php56 .htm .html .shtml
+    AddType application/x-httpd-php5 .php
+
+    * if .htaccess is not displaying, make sure that hidden files are displaying
+      - http://www.limguohong.com/tag/error-could-not-create-file-htaccess-in-path-file-exists/
+
+    * info for the line needed in htaccess found here:
+      - https://stackoverflow.com/questions/17024272/addtype-in-htaccess-causes-page-to-download
+    
+*******************************************************************************************************************************    
+    
+-- Both options will allow for php tags to be used inside of the markup without commenting them out --
+
+
+
+These work the same... 
+
+<?php include '../../php/headContent.html';?>
+  
+<?php
+  include("../../php/headContent.html");
+?>
+  

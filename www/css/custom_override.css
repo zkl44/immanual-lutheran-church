@@ -1,0 +1,342 @@
+/***********************/
+/* GENERAL - SITE WIDE */
+/***********************/
+body {
+	font-family: 'Roboto', sans-serif !important;
+}
+a:hover {
+    text-decoration: none !important;
+}
+a[href^="javascript"]::after {
+  color: red;
+  content: "    **";
+}
+img {
+  border-radius: 16px;
+  height: auto;
+  width: 100%;
+}
+@media (max-width: 991px) {
+   img {
+     max-width: 420px;
+  }
+}
+.btn-primary {
+  background: #065779;
+  border-color: #065779;
+}
+.btn-primary:hover {
+  background: #d7b26e;
+  border-color: #d7b26e;
+}
+.container-fluid,
+.pageHeader,
+.pageFooter {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.pageHeader {
+  background: #e5e5e5;
+}
+#main,
+.mapContainer{
+  margin-bottom: 60px;
+}
+.list-group-item.active {
+  background: #d7b26e;
+  border-color: #d7b26e;
+}
+.indentedGroup-noGroupHeader .groupHeader {
+  display: none;
+}
+.indentedGroup + .indentedGroup {
+  margin-top: 16px;
+}
+.indentedGroup .groupHeader {
+  color: #d7b26e;
+}
+.indentedGroup i {
+  color: #d7b26e;
+}
+.indentedGroup i.fa-circle {
+  font-size: 6px;
+  position: relative;
+  top: -3px;
+}
+.searchResults-list {
+  padding-left: 0;
+}
+.searchResults-listItem {
+  list-style: none;
+}
+.searchResults-listItem a {
+  color: #000;
+}
+.searchResults-listItem a:hover {
+  color: #d7b26e;
+}
+
+@media (min-width: 992px) {
+  .navbar,
+  .container-fluid,
+  .pageHeader {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .pageFooter {
+    padding-left: 80px;
+    padding-right: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .container-fluid,
+  .pageHeader {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  .pageFooter {
+    padding-left: 150px;
+    padding-right: 0;
+  }
+}
+
+/*************/
+/* TOOLTIPS  */
+/*************/
+@media (max-width: 394px) {
+  .home .has-infoTip {
+    position: relative;
+  }
+  .home .infoTip-message {
+    right: 1em;
+    top: inherit;
+  }
+}
+@media (min-width: 395px) {
+  .home .infoTip-container {
+    position: relative;
+  }
+}
+.infoTip-tab {
+  cursor: pointer;
+}
+.infoTip-tab:active + .infoTip-message,
+.infoTip-tab:focus + .infoTip-message,
+.infoTip-tab:hover + .infoTip-message {
+  opacity: 1;
+}
+.infoTip-message {
+  background: #fff;
+  border-radius: 10px;
+  color: black;
+  padding: 1em;
+  right: 0;
+  text-align: left;
+  top: 20px;
+  opacity: 0;
+  -webkit-box-shadow: 0px 1px 8px 1px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 1px 8px 1px rgba(0,0,0,0.5);
+  box-shadow: 0px 1px 8px 1px rgba(0,0,0,0.5);
+  transition: opacity .5s ease-out;
+  -moz-transition: opacity .5s ease-out;
+  -webkit-transition: opacity .5s ease-out;
+  -o-transition: opacity .5s ease-out;
+}
+.infoTip-message.is-small {
+  width: 260px;
+}
+
+/*************/
+/* UTILITIES */
+/*************/
+.hidden {
+  display: none;
+}
+.negative_column_space {
+  margin-top: -1.5rem !important;
+  padding-top: 0 !important;  
+}
+
+
+/**********/
+/* NAVBAR */
+/**********/
+.navbar {
+   background-color: #065779;
+   padding: 1em;
+}
+.home .navbar {
+  background-color: #24485d;
+  z-index: 1;
+}
+.home .navbar.collapsedNav {
+  background-color: rgba(79,79,79, 0.5);
+}
+.navbar .dropdown-toggle::after {
+  display: none;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .home .navbar {
+    background-color: rgba(79,79,79, 0);
+  }
+  .navbar .nav-item {
+    margin-left: 2em;
+  }
+  .navbar .nav-item .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+}
+
+/*************/
+/* HOME PAGE */
+/*************/
+.container-fluid.default-padding {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.coverBanner {
+  top: 0;
+}
+/* added for notification alert */
+.coverBanner {
+  flex-direction: column;
+  padding-top: 72px;
+}
+.coverScrollArrow {
+  bottom: 0;
+}
+.homepage_viewport_container {
+  background-color: rgba(0,0,0,0.3);
+  /* Setting but overriding with JS */
+  height: 100vh; 
+  width: 100%;
+}
+.homepage_cover_outer_container {
+  background: #fff;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+.homepage_video_container {
+  height: 100%;
+  width: 100%;
+}
+.homepage_video_container video {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.hoursBanner {
+  background: #d7b26e;
+}
+
+.notificationBanner {
+  background: #91633b;
+  margin-bottom: 40px;
+}
+
+.bibleVerseBanner {
+  background: #065779;
+}
+
+.coverBanner .bannerText {
+    line-height: 1.2;
+  }
+
+@media (max-width: 991px) and (orientation:landscape) {
+.coverBanner .bannerText {
+/*     font-size: 45px;
+    font-size: 10vh; */
+  display: none;
+  }
+}
+@media (max-width: 991px) and (orientation:portrait) {
+.coverBanner .bannerText {
+    font-size: 45px;
+    font-size: 10vw;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .homepage_video_container video {
+    object-fit: fill;
+  }
+  .coverBanner .bannerText {
+    font-size: 70px;
+  }
+}
+
+  .worship_time_spacer {
+    border-left: 1px solid #fff;
+  }
+
+/* Bounce animation added for more clarity that home page can scroll */
+.animate-bounce {
+  animation: animate-bounce 2s infinite;
+ }
+    
+@keyframes animate-bounce  {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+
+/***************/
+/* PASTOR PAGE */
+/***************/
+
+
+
+/***************/
+/* PAGE TITLE  */
+/***************/
+.pageHeader {
+  background-size: cover;
+  background-position: center center;
+  height: auto;
+  min-height: 150px;
+  width: 100%;
+}
+.has-background-openBible .pageHeader {
+  background-image: url('../images/background-openBible.jpg');
+}
+.has-background-fields .pageHeader {
+  background-image: url('../images/background-fields.jpg');
+}
+.has-background-boysRunning .pageHeader {
+  background-image: url('../images/background-boysRunning.jpg');
+}
+
+
+
+/*****************/
+/*    Footer     */
+/*****************/
+.pageFooter {
+  background: #bbc490;
+}
+.pageFooter i {
+  color: #8a6e39;
+  font-size: 1.25em;
+}
+.pageFooter a:hover {
+  color: #8a6e39 !important;
+}
+
+
+
+
+

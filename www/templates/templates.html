@@ -1,0 +1,107 @@
+<script id="rowTemplate" type="text/x-handlebars-template">
+{{#each row}}
+  <div class="row pt-5">
+      <div class="col-lg-{{leftCol.[0].width}} left-col">
+        <div class="row">
+          {{#each leftCol}}
+            {{> column}}
+          {{/each}}
+         </div>
+      </div>
+      <div class="col-lg-{{rightCol.[0].width}} right-col">
+        <div class="row">
+          {{#each rightCol}}
+            {{> column}}
+          {{/each}}
+         </div>
+      </div>
+  </div>
+{{/each}}
+</script>
+
+<script id="column-partial" type="text/x-handlebars-template">
+  <div class="pb-4 pt-4 col-12{{#if addClass}} {{addClass}}{{/if}}">
+    {{#if sectionTitle}}
+      <h2 class="mb-3 h4">{{sectionTitle}}</h2>
+     {{/if}}
+     {{#if paragraph}}
+        {{#each paragraph}}
+          <p>{{text}}</p>
+        {{/each}}
+     {{/if}}
+     {{#if image}}
+     <div><img src="{{image.[0]}}" alt="{{image.[1]}}"/></div>
+     {{/if}}
+     
+     {{#if video}}
+        {{#each video}}
+          <h2 class="mb-3 h4">{{[0]}}</h2>
+          <div>
+            <video controls width="100%">
+              <source src="{{[1]}}" type="video/mp4">
+            </video>
+            <p class="mb-5 text-right">
+              <a href="{{[1]}}">Click here to download</a>.
+            </p>
+          </div>
+        {{/each}}
+     {{/if}}
+     
+     {{#if buttonLink}}
+      <div class="mt-4">
+        <a href="{{buttonLink.[0]}}" class="btn btn-primary btn-lg text-white link-button">
+          <span>{{buttonLink.[1]}}</span>
+          {{#if buttonLink.[2]}}
+          <span class="sr-only">{{buttonLink.[2]}}</span>
+          {{/if}}
+          <i class="fas fa-chevron-right ml-2" aria-hidden="true"></i>
+        </a>
+      </div>
+     {{/if}}
+     {{#if pdfLink}}
+      <div class="mt-4">
+        <a href="{{pdfLink.[0]}}" target="_blank" class="btn btn-primary btn-lg text-white link-button">
+          <span>{{pdfLink.[1]}}</span>
+          {{#if pdfLink.[2]}}
+          <span class="sr-only">{{pdfLink.[2]}}</span>
+          {{/if}}
+          <i class="fas fa-file-pdf ml-2" aria-hidden="true"></i>
+        </a>
+      </div>
+     {{/if}}
+     {{#if externalLink}}
+      <div class="mt-4">
+        <a href="{{externalLink.[0]}}" target="_blank" class="btn btn-primary btn-lg text-white link-button">
+          <span>{{externalLink.[1]}}</span>
+          {{#if externalLink.[2]}}
+          <span class="sr-only">{{externalLink.[2]}}</span>
+          {{/if}}
+          <i class="fas fa-external-link-alt ml-2" aria-hidden="true"></i>
+        </a>
+      </div>
+     {{/if}}
+     {{#if sideNavGroup}}
+       <div class="list-group list-group-flush">
+          {{#each sideNavGroup}}
+            <a href="{{linkPath}}" class="list-group-item list-group-item-action border-bottom {{linkActive}}">{{linkText}}</a>
+          {{/each}}
+        </div>
+     {{/if}}
+     {{#if search}}
+       <?php 
+        include "archived/searchFormTemplate.html";
+        include "archived/searchResultsTemplate.php";
+       ?>
+     {{/if}}
+     {{#if indentedGroup}}
+       {{#each indentedGroup}}
+         <div class="indentedGroup">
+            <h3 class="groupHeader h6 border-bottom mb-1 pb-1">{{groupHeading}}</h3>
+            {{#each groupItem}}
+              <div class="groupItem pl-2 d-flex align-items-baseline"><i class="fas fa-circle mr-2" aria-hidden="true"></i>{{text}}</div>
+            {{/each}}
+         </div>
+       {{/each}}
+     {{/if}}
+    </div>
+</script>
