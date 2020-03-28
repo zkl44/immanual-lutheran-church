@@ -1,0 +1,106 @@
+<?php 
+  $title = "Home";
+  $templateName = "home";
+?>
+<!DOCTYPE html>
+<html>
+  <?php include("templates/headContent.html"); ?>
+  <body class="<?php echo $templateName ?>">
+    <div id="CoverContainer" class="homepage_viewport_container position-relative">
+
+      <?php include("templates/headerNav.html"); ?>
+      
+      <div class="coverBanner container-fluid text-white d-flex align-items-center position-absolute h-100 default-padding">
+      <!-- Banner for coronavirus notifications -->
+      <div class="notificationBanner row text-white" role="alert">
+        <div class="col-12 h4 mt-3">Online Sunday Sermons Only</div>
+        <div class="col-12">
+          In response to the most recent recommendations and restrictions regarding COVID-19, all church services and activities are cancelled through the end of March. Sunday services will be available online during this time.  
+        </div>
+        <div class="col-12 mb-3">
+          <a class="btn btn-primary btn-lg text-white link-button pl-4 pr-4 mt-3 mr-2" href="sermons.html" role="button">
+            <span>Watch Sermon</span>
+            <i class="fas fa-chevron-right ml-2"></i>
+          </a>
+          <a href="http://www.cph.org/t-bestill-study.aspx" target="_blank" class="mt-3 btn btn-primary btn-lg text-white link-button">
+            <span>Sunday School Resources</span>
+            <span class="sr-only">Concordia Publishing House website</span>
+            <i class="fas fa-external-link-alt ml-2" aria-hidden="true"></i>
+          </a>
+        </div>
+       
+      </div>
+      <!-- end banner-->
+        <div class="row bannerText">
+          <div class="col-12">
+            150 Years of
+          </div>
+          <div class="col-12">
+            God with Us
+          </div>
+          <div class="col-12">
+            <a class="btn btn-outline-light text-uppercase pl-4 pr-4" href="visit.html" role="button">
+              <span class="font-weight-bold">Visit Us</span>
+              <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+        
+        <div class="coverScrollArrow container-fluid text-white text-center position-absolute default-padding">
+        <div class="row">
+          <div class="col-12">
+            <a class="btn btn-link text-white animate-bounce" href="#scrollTo" role="button">
+              <i class="fas fa-chevron-down fa-3x"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="homepage_cover_outer_container position-absolute">
+        <div class="homepage_video_container">
+          <video id="coverVideo" muted loop class="position-absolute">
+              <source src="videos/Sunset-Lapse/MP4/Sunset-Lapse.mp4" type="video/mp4" />
+          </video>
+          <div class="defaultImage hidden">
+              <!--<img src="../../videos/Sunset-Lapse/Snapshots/Sunset-Lapse.jpg" alt="">-->
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div id="scrollTo" class="row ml-0 mr-0 pb-5 pt-5 text-white banner hoursBanner">
+        <div class="col-12 text-center h2 text-uppercase">
+          Sunday Worship
+        </div>
+        <div class="col-12 text-center summer_worship_time has-infoTip">
+          <span class="h4">10:00 AM / 9:30 AM (Summer)</span>
+          <div class="infoTip-container d-inline">
+            <span class="infoTip-tab" tabindex="0">
+              <i class="fas fa-info-circle pl-2"></i>
+            </span>
+            <div class="infoTip-message position-absolute is-small">
+              Summer worship hours begin Memorial Day weekend and run through Labor Day weekend.
+            </div>
+          </div>
+        </div>
+          
+    </div>
+    
+    <div id="main" class="container-fluid"></div>
+    
+    <div class="row pb-5 pt-5 text-white ml-0 mr-0 banner bibleVerseBanner">
+        <div class="col-12 text-center h3 pt-4">
+          For our sake He made him to be sin who knew no sin, <br>
+          so that in him we might become the righteousness of God.
+        </div>
+        <div class="col-12 mt-3 text-center pb-4">
+          2 Corinthians 5:21
+        </div>
+    </div>
+    
+    <?php include("templates/footer.html"); ?>
+    
+
+  </body>
+</html>

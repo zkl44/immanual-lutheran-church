@@ -1,0 +1,6 @@
+allow from all
+
+DirectoryIndex home.html
+
+AddHandler application/x-httpd-php .htm .html
+AddType application/x-httpd-php .htm .html
